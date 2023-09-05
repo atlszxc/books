@@ -25,7 +25,7 @@ const Card = ({ book }: CardProps) => {
                         </header>
                         <section>
                             { book.volumeInfo.authors && <p>Authors: {book.volumeInfo.authors.toLocaleString()}</p> }
-                            { book.volumeInfo.categories && <p>Categories: {book.volumeInfo.categories.toLocaleString()}</p> }
+                            { book.volumeInfo.categories && <p>Categories: {book.volumeInfo.categories[0]}</p> }
                         </section>
                     </section>
                 </div>

@@ -22,6 +22,7 @@ const Detail = () => {
                 className="w-full px-5 py-4"
             >
                 { book?.volumeInfo.categories && <p>{book?.volumeInfo.categories.join('/')}</p> }
+                { book?.volumeInfo.authors && <p>{book.volumeInfo.authors.join(', ')}</p> }
                 { book?.volumeInfo.title && <h2 className="text-5xl my-4">{book?.volumeInfo.title}</h2> }
                 { book?.searchInfo && <p dangerouslySetInnerHTML={{__html: `${book?.searchInfo.textSnippet}`}} /> }
             </section>
